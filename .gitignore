@@ -1,0 +1,31 @@
+# ---------------------------------------------
+# Whitelist: only Python source files are committed
+# ---------------------------------------------
+# Ignore everything, then re-allow folders (so git can look inside
+# them), .py files, and this file itself.
+*
+!*/
+!*.py
+!.gitignore
+
+# ---------------------------------------------
+# Never commit, even if a .py file ends up here
+# ---------------------------------------------
+# The ADNI Data Use Agreement does not allow the data to be shared,
+# and the generated reports quote patient RIDs.
+data/
+results_*/
+report_cards/
+report_docx/
+visualizations/
+
+# Python caches, notebook checkpoints, virtual environments
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# Editors
+.vscode/
+.idea/
