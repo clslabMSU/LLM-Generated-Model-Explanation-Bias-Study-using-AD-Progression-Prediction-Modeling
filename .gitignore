@@ -1,0 +1,38 @@
+# ---------------------------------------------
+# Only the ADNI-explainer-agent folder belongs in this repo
+# ---------------------------------------------
+# ADNI-prediction-models/ and data_prep/ stay out.
+/*
+!/.gitignore
+!/ADNI-explainer-agent/
+
+# ---------------------------------------------
+# Inside ADNI-explainer-agent: only Python source files
+# ---------------------------------------------
+# Ignore everything, then re-allow folders (so git can look inside
+# them) and .py files.
+/ADNI-explainer-agent/**
+!/ADNI-explainer-agent/**/
+!/ADNI-explainer-agent/**/*.py
+
+# ---------------------------------------------
+# Never commit, even if a .py file ends up here
+# ---------------------------------------------
+# The ADNI Data Use Agreement does not allow the data to be shared,
+# and the generated reports quote patient RIDs.
+data/
+results_*/
+report_cards/
+report_docx/
+visualizations/
+
+# Python caches, notebook checkpoints, virtual environments
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# Editors
+.vscode/
+.idea/
