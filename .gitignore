@@ -1,12 +1,19 @@
 # ---------------------------------------------
-# Whitelist: only Python source files are committed
+# Only the ADNI-explainer-agent folder belongs in this repo
+# ---------------------------------------------
+# ADNI-prediction-models/ and data_prep/ stay out.
+/*
+!/.gitignore
+!/ADNI-explainer-agent/
+
+# ---------------------------------------------
+# Inside ADNI-explainer-agent: only Python source files
 # ---------------------------------------------
 # Ignore everything, then re-allow folders (so git can look inside
-# them), .py files, and this file itself.
-*
-!*/
-!*.py
-!.gitignore
+# them) and .py files.
+/ADNI-explainer-agent/**
+!/ADNI-explainer-agent/**/
+!/ADNI-explainer-agent/**/*.py
 
 # ---------------------------------------------
 # Never commit, even if a .py file ends up here
